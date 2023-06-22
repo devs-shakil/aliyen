@@ -1,0 +1,18 @@
+.darkmode{
+    background-color:#3B3B3B;
+    color:white;
+}
+.img{
+    /* width:400px; */
+}
+.img img{
+    width:100%;
+}
+.table-h{
+    text-align: center;
+    padding:20px;
+    margin:20px;
+    font-size: 2rem;
+    text-decoration: underline;
+    
+}

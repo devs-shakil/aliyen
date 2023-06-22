@@ -1,17 +1,302 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./custom.sass"> -->
+    <link rel="stylesheet" href="./styles.css">
 
 </head>
-<body>
-
-
-
+<body class="dark-mode">
+ 
+  
+<header>
+    <nav class=" container navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">LOGO</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ABOUT</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  DROPDOWN
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#" tabindex="-1">CONTACT</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+              <button class="btn btn-outline-success " id="btnSwitch">Dark</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+</header>
+<section>
+    <div class="container mt-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+               <h2 class="display-4">Hi, I have Creative Design experience</h2>
+               <p class="lead ">I'm Shakil, A creative product designer , I have been helping businesses to solving there problem with my desgin  for two years</p>
+               <div class="btn-group" role="group">
+                    <a href="#" class="btn btn-success p-2 m-1 rounded">Contact me</a>
+                    <a href="#" class="btn btn">View Portfollio</a>
+               </div>
+            </div>
+            <div class="col-md-6">
+                <div class="img rounded">
+                    <img class="rounded" src="./shakil.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="table-h">Friends List</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Shakil </td>
+                            <td>Hossain</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Hasan</td>
+                            <td>Rakib</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>ICS</td>
+                            <td>Rakib</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>Abul</td>
+                            <td>Kashem</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <h2 class="table-h">Sign Up</h2>
+            <div class="col-md-12">
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-4">
+                      <label for="validationCustom01" class="form-label">First name</label>
+                      <input type="text" class="form-control" id="validationCustom01" value="Shakil" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="validationCustom02" class="form-label">Last name</label>
+                      <input type="text" class="form-control" id="validationCustom02" value="Hossain" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="validationCustomUsername" class="form-label">Username</label>
+                      <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                          Please choose a username.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="validationCustom03" class="form-label">City</label>
+                      <input type="text" class="form-control" id="validationCustom03" required>
+                      <div class="invalid-feedback">
+                        Please provide a valid city.
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="validationCustom04" class="form-label">State</label>
+                      <select class="form-select" id="validationCustom04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>...</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid state.
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="validationCustom05" class="form-label">Zip</label>
+                      <input type="text" class="form-control" id="validationCustom05" required>
+                      <div class="invalid-feedback">
+                        Please provide a valid zip.
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                          Agree to terms and conditions
+                        </label>
+                        <div class="invalid-feedback">
+                          You must agree before submitting.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary" type="submit">Submit form</button>
+                    </div>
+                  </form>  
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container mt-5">
+        <div class="row"> 
+            <h2 class="table-h">Some List of Country</h2>
+            <div class="col-sm-4">
+            
+                <ul class="list-group">
+                    <li class="list-group-item">Country list of Asia</li>
+                  
+                    <li class="list-group-item list-group-item-primary">Bangladesh</li>
+                    <li class="list-group-item list-group-item-secondary">India</li>
+                    <li class="list-group-item list-group-item-success">Pakistan</li>
+                    <li class="list-group-item list-group-item-danger">Afganstan</li>
+                    <li class="list-group-item list-group-item-warning">Japan</li>
+                    <li class="list-group-item list-group-item-info">China</li>
+                    <li class="list-group-item list-group-item-light">Indonesia</li>
+                    <li class="list-group-item list-group-item-dark">Thailand</li>
+                  </ul>
+            </div>
+            <div class="col-sm-4">
+                <ul class="list-group">
+                    <li class="list-group-item">Country list of Europe</li>
+                  
+                    <li class="list-group-item list-group-item-primary">Germany</li>
+                    <li class="list-group-item list-group-item-secondary">Italy</li>
+                    <li class="list-group-item list-group-item-success">United kingdom</li>
+                    <li class="list-group-item list-group-item-danger">France</li>
+                    <li class="list-group-item list-group-item-warning">Greece</li>
+                    <li class="list-group-item list-group-item-info">Ukraine</li>
+                    <li class="list-group-item list-group-item-light">Poland</li>
+                    <li class="list-group-item list-group-item-dark">Belgium</li>
+                  </ul>
+            </div>
+            <div class="col-sm-4">
+                <ul class="list-group">
+                    <li class="list-group-item">Country list of Africa</li>
+                  
+                    <li class="list-group-item list-group-item-primary">South Africa</li>
+                    <li class="list-group-item list-group-item-secondary">Nigeria</li>
+                    <li class="list-group-item list-group-item-success">Morocco</li>
+                    <li class="list-group-item list-group-item-danger">Kenya</li>
+                    <li class="list-group-item list-group-item-warning">Sudan</li>
+                    <li class="list-group-item list-group-item-info">Ghana</li>
+                    <li class="list-group-item list-group-item-light">Senegal</li>
+                    <li class="list-group-item list-group-item-dark">Tanzania</li>
+                  </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="table-h">Spinner</h2>
+                <!-- Spinner -->
+                <div id="spinner" class="spinner-border" role="status" >
+                    <span class="d-none">Loading...</span>
+                </div>
+                <button id="start-processing-btn">Processing</button>
+               
+                
+            </div>
+            <div class="col-sm-6">
+                <h2 class="table-h">Progrss bar</h2>
+                 <!-- Progress bar -->
+                 <div id="progress-bar" class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <h2 class="table-h">Modal show after one hour</h2>
+            <div class="col-sm-12">
+                <div class="modal-body">
+                    <!-- Button trigger modal -->
+                <button type="button" id="openModalBtn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Launch Modal
+                </button>
+  
+  <!-- Modal -->
+                <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quia odit beatae iste quidem expedita iusto ratione deleniti minus. 
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+  
+                  
+      
+            </div>
+        </div>
+    </div>
+</section>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
-
+<script src="./app.js"></script>
 </body>
 </html>
