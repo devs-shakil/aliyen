@@ -59,8 +59,6 @@ const progressBar = document.getElementById("progress-bar").querySelector(".prog
 
 // Simulating a processing task
 function processTask() {
-  // Show the spinner
-  spinner.style.display = "block";
 
   // Update the progress bar
   let progress = 0;
@@ -162,3 +160,27 @@ const showAlert = () => {
   }
   
 setInterval(showAlert, 5000)
+
+//spinner
+  // Show the spinner
+  function showSpinner() {
+    document.getElementById("loader").classList.remove("d-none");
+  }
+
+  // Hide the spinner
+  function hideSpinner() {
+    document.getElementById("loader").classList.add("d-none");
+  }
+
+  // Simulate loading for 3 seconds (replace with your actual loading logic)
+  function simulateLoading() {
+    showSpinner();
+    setTimeout(function() {
+      hideSpinner();
+    }, 3000);
+  }
+
+  window.addEventListener("load", function() {
+    simulateLoading();
+  });
+

@@ -20,3 +20,11 @@
 .active{
     background-color:#F2F2F2;
 }
+
+
+#loader {
+  top: 50%;
+  left: 50%;
+  transition: translate(-50%,-50%);
+  position: absolute;
+}
