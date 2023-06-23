@@ -101,3 +101,64 @@ window.addEventListener("scroll", function() {
     }
   });
   
+//table pagination 
+const table = document.querySelector('#myTable');
+let rowsPerPage = 5;
+let currentPage = 1;
+
+const displayRows = () =>{
+    let startIndex = (currentPage - 1) * rowsPerPage;
+    let endIndex = startIndex + rowsPerPage;
+
+    let rows = table.rows;
+    for(let i = 1; i< rows.length; i++){
+        if (i >= startIndex && i < endIndex) {
+            rows[i].style.display = "table-row";
+          } else {
+            rows[i].style.display = "none";
+          }
+         } 
+    }
+
+    
+    function createPagination() {
+        var totalPages = Math.ceil((table.rows.length - 1) / rowsPerPage);
+        var pagination = document.getElementById("pagination");
+        pagination.innerHTML = "";
+  
+        for (var i = 1; i <= totalPages; i++) {
+          var link = document.createElement("a");
+          link.href = "#";
+          link.innerHTML = i;
+          link.classList.add('page-link')
+  
+          if (i === currentPage) {
+            link.classList.add('active')
+          }
+  
+          link.onclick = function() {
+            currentPage = parseInt(this.innerHTML);
+            displayRows();
+            createPagination();
+            return false;
+          };
+  
+          pagination.appendChild(link);
+        }
+      }
+  
+
+//call function
+displayRows()
+createPagination()
+
+
+//alert 
+const showAlert = () => {  
+    // Find the alert container
+    var container = document.getElementById('alertContainer');
+    container.className = 'd-block'
+    alert(container)
+  }
+  
+setInterval(showAlert, 5000)

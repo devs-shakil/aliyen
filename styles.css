@@ -2,9 +2,7 @@
     background-color:#3B3B3B;
     color:white;
 }
-.img{
-    /* width:400px; */
-}
+
 .img img{
     width:100%;
 }
@@ -15,4 +13,10 @@
     font-size: 2rem;
     text-decoration: underline;
     
+}
+#btnSwitch{
+    margin-left:5px;
+}
+.active{
+    background-color:#F2F2F2;
 }
