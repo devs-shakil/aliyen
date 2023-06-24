@@ -184,3 +184,68 @@ setInterval(showAlert, 5000)
     simulateLoading();
   });
 
+//canvas style 
+document.addEventListener("DOMContentLoaded", function() {
+    var canvas = document.getElementById("chartCanvas");
+    var ctx = canvas.getContext("2d");
+  
+    // Data for the chart (team scores)
+    var data = [
+      { team: "Team A", score: 80 },
+      { team: "Team B", score: 65 },
+      { team: "Team C", score: 90 },
+      { team: "Team D", score: 75 }
+    ];
+  
+    // Set the canvas size and chart parameters
+    canvas.width = 500;
+    canvas.height = 300;
+    var chartMargin = 40;
+    var chartHeight = canvas.height - 2 * chartMargin;
+    var barWidth = (canvas.width - 2 * chartMargin) / data.length;
+  
+    // Find the maximum score in the data
+    var maxScore = Math.max(...data.map(item => item.score));
+  
+    // Function to draw a single bar
+    function drawBar(x, y, height) {
+      ctx.fillStyle = "steelblue";
+      ctx.fillRect(x, y, barWidth, height);
+    }
+  
+    // Function to draw the entire chart
+    function drawChart() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+      // Draw the bars
+      data.forEach(function(item, index) {
+        var barX = chartMargin + index * barWidth;
+        var barHeight = (item.score / maxScore) * chartHeight;
+        var barY = canvas.height - chartMargin - barHeight;
+        drawBar(barX, barY, barHeight);
+  
+        // Draw the team labels
+        ctx.fillStyle = "black";
+        ctx.font = "12px Arial";
+        ctx.textAlign = "center";
+        ctx.fillText(item.team, barX + barWidth / 2, canvas.height - chartMargin + 15);
+      });
+  
+      // Draw the y-axis
+      ctx.beginPath();
+      ctx.moveTo(chartMargin, canvas.height - chartMargin);
+      ctx.lineTo(chartMargin, chartMargin);
+      ctx.strokeStyle = "black";
+      ctx.stroke();
+  
+      // Draw the x-axis
+      ctx.beginPath();
+      ctx.moveTo(chartMargin, canvas.height - chartMargin);
+      ctx.lineTo(canvas.width - chartMargin, canvas.height - chartMargin);
+      ctx.stroke();
+    }
+  
+    // Call the drawChart function to initially draw the chart
+    drawChart();
+  });
+  
